@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.getUsers();
-    this.setCurrentUser();
+    // this.setCurrentUser();
   }
 
   getUsers(){
@@ -31,6 +31,7 @@ export class AppComponent implements OnInit {
   }
 
   setCurrentUser() {
+    debugger;
     const userString = localStorage.getItem('user');
     if(!userString) return;
     const user: User = JSON.parse(userString);
