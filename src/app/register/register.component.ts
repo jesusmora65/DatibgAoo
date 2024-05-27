@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrl: './register.component.css',
 })
 export class RegisterComponent {
-  model: any = [];
+  model: any = {};
   @Output() cancelRegister = new EventEmitter();
 
   constructor(private accountService: AccountService, private toastr: ToastrService) {}

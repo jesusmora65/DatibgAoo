@@ -13,7 +13,8 @@ export class AccountService {
 
   constructor(private http: HttpClient) {}
 
-  login(model: any) {
+  login(model: User) {
+    debugger;
     return this.http.post<User>(this.apiURL + 'accounts/login', model).pipe(
       map((response: User) => {
         const user = response;
@@ -25,7 +26,8 @@ export class AccountService {
     );
   }
 
-  register(model: any) {
+  register(model: User) {
+    debugger;
     return this.http.post<User>(this.apiURL + 'accounts/register', model).pipe(
       map((user) => {
         localStorage.setItem('user', JSON.stringify(user));
